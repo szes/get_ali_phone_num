@@ -40,4 +40,5 @@
 * python 2.7.5
 * pip install request
 * pip install sqlalchemy
+* pip install psycopg2
 * psql (9.2.18, server 9.5.0)
