@@ -63,8 +63,13 @@ def get_ali_phone_nums():
 				continue
 			phone_info = AliPhoneInfo(data[0], data[1])
 			session.add(phone_info)
+		
+		try:
+			session.commit()
+		except Exception as e:
+			print "commit error:", e
+			session.rollback()
 
-		session.commit()
 		time.sleep(1)
 
 
